@@ -1,0 +1,12 @@
+<h1>Welcome</h1>
+
+<h1>add genres logic</h1>
+
+<ul>
+    <% @shows.each do |show| %>
+    <%=link_to image_tag(show.show_cover, size: "250x200"), show_path(show.id)%>
+    <li><h3>Name: <%=link_to show.show_name, show_path(show.id)%></h3></li>
+    <% end %>
+</ul>
+
+

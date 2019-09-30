@@ -1,5 +1,6 @@
 class Episode < ApplicationRecord
-    belongs_to :show
     has_many :views
     has_many :users, through: :views
+    
+    belongs_to :show
 end

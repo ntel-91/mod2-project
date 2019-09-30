@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+
+//  @import "bootstrap";
+@import "semantic-ui";
+
+
+
+
+ body {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d0/Elegant_Background-3.jpg");
+    background-color: #cccccc;
+ }

@@ -1,8 +1,14 @@
 class ShowsController < ApplicationController
-  def index
+  def welcome
+    @shows = Show.all
+  end
+
+  def genres_page
+    @shows = Show.all
   end
 
   def show
+    @show = Show.find(params[:id])
   end
 
   def new
