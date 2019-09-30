@@ -5,6 +5,8 @@ class ShowsController < ApplicationController
     @mysteries = Show.all.select { |show| show.genre == "Mystery" }
     @young_adult = Show.all.select { |show| show.genre == "Young Adult" }
     
+    @user = session[:user]
+    @shows = Show.all
   end
 
   def genres_page

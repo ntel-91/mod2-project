@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :episodes
   resources :shows, only: [:show]
-
+  get '/mainpage',  to: 'static#mainpage'
   get '/welcome', to: 'shows#welcome', as: 'welcome'
   get '/genres/:id', to: 'shows#genres_page', as: 'genres'
   get '/login', to: 'users#login'

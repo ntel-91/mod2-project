@@ -1,2 +1,13 @@
 <h1>Users    create form</h1>
 
+<%= form_with model: @user do |f| %>
+    <label> Username: </label>
+    <%= f.text_field :username %><br>
+    <label> First Name: </label>
+    <%= f.text_field :first_name %><br>
+    <label> Last Name: </label>
+    <%= f.text_field :last_name %><br>
+    <label> Password: </label>
+    <%= f.text_field :password %><br>
+    <%= f.submit "Create Account" %>
+<% end %>
