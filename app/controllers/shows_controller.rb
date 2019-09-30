@@ -1,5 +1,6 @@
 class ShowsController < ApplicationController
   def welcome
+    @user = session[:user]
     @shows = Show.all
   end
 
