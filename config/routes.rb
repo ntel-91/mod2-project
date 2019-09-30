@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :shows, only: [:show]
 
   get '/welcome', to: 'shows#welcome', as: 'welcome'
-  get '/genres', to: 'shows#genres_page', as: 'genres'
+  get '/genres/:id', to: 'shows#genres_page', as: 'genres'
   get '/login', to: 'users#login'
   resources :user_shows
   resources :users
