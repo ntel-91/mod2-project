@@ -11,13 +11,13 @@ class SessionsController < ApplicationController
        else
         
         #        flash[:message] = “Michael Jordan is not a musician...maybe”
-           redirect_to mainpage_path
+           redirect_to login_path
        end
     end
 
     def logout
-        session[:user] =nil 
-        redirect_to mainpage_path
+        session[:user] = nil 
+        redirect_to login_path
     end
 
     

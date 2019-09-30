@@ -21,8 +21,7 @@
     <h1>Young Adult</h1>
     
         <% @young_adult.map do |show| %>
-            <%=link_to image_tag(show.show_cover, size: "285x15"), show_path(show.id)%>
+            <%=link_to image_tag(show.show_cover, size: "285x165"), show_path(show.id)%>
         <% end %>
 
 </ul>
-        

@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  root 'sessions#new'
+
   
   resources :episodes
   resources :shows, only: [:show]
-  get '/mainpage',  to: 'sessions#new', as: 'mainpage'
-  post '/mainpage', to: 'sessions#create'
+  get '/login',  to: 'sessions#new', as: 'login'
+  post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#logout', as: 'logout'
   get '/welcome', to: 'shows#welcome', as: 'welcome'
   get '/genres', to: 'shows#genres_page', as: 'genres'

@@ -17,6 +17,7 @@ class ShowsController < ApplicationController
 
   def show
     @show = Show.find(params[:id])
+    @episodes = Episode.all.select{ |episodes| episodes.show_id == @show.id}
   end
 
   def new
