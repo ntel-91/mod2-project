@@ -1,12 +1,14 @@
 class ShowsController < ApplicationController
   def welcome
+    
+    @user = session[:user]
+    
+
     @shows = Show.all.sort_by{ |show| show.genre}
     @comedies = Show.all.select { |show| show.genre == "Comedy" }
     @mysteries = Show.all.select { |show| show.genre == "Mystery" }
     @young_adult = Show.all.select { |show| show.genre == "Young Adult" }
     
-    @user = session[:user]
-    @shows = Show.all
   end
 
   def genres_page
