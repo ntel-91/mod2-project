@@ -11,6 +11,7 @@ User.destroy_all
 # randy = User.create!(first_name: "Randy 'The Meat Machine'", last_name: "Johnson", username: "herpes_free_since_03", password_digest: )
 # chip = User.create!(first_name: "Chip", last_name: "Whitley", username: "shaquille_oatmeal", password_digest: )
 ham = User.create!(first_name: "Ham", last_name: "Diglet", username: "bill_nye_the_russian_spy", password: "hamdiglet")
+chuck = User.create!(first_name: "chuck", last_name: "smith", username: "chucksmith", password: "chucksmith")
 
 
 Show.destroy_all

@@ -1,8 +1,25 @@
-<%= button_to "Logout", logout_path, :method => :get %>
+<div class="hero">
+
+        <h1 class="ui header">   
+            <%= link_to image_tag("notflix.png", size: "500x200"), welcome_path %>
+          </h1>
+    
+        <div class="mouse">
+            <span></span>
+        </div>
+    
+    </div>
+
+
 
 <ul>
-    <h1></h1>
+
+    <h1>Recently View</h1>
+        <% @show.map do |show| %>
+             <%= link_to image_tag(show.show_cover, size: "285x165"), show_path(show.id) %>
+        <% end %>
     
+        
 
     <h1>Comedy</h1>
         <% @comedies.map do |show| %>

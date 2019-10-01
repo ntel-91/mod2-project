@@ -15,7 +15,7 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-Sticky Header
+// Sticky Header;
 $(window).scroll(function() {
 
     if ($(window).scrollTop() > 100) {
@@ -69,3 +69,4 @@ $('nav a').click(function(event) {
 //         }, 750);
 //     });
 // });
+
