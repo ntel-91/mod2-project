@@ -8,18 +8,65 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <div class="ui sizer vertical segment">
+     <!-- <div class="ui sizer vertical segment">
         <h1 class="ui header">   
       <%= link_to image_tag("notflix.png", size: "200x50"), welcome_path %>
     </h1>
         <h3>----------Sold exclusively by men who also sell shrimp out of the back of a van-----------</h3>
         <h1>_______________________________________________________________________________________________________________</h1>
-    </div>
+    </div> --> 
 
+     <div class="container indigo topLeftBorders">
+        <%= link_to image_tag("notflix.png", size: "100x20"), welcome_path %>
+        <a>TV Shows</a>
+        <a>Movies</a>
+      
+      </div> 
   </head>
 
   <body>
-    
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
+<link href='style.css' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+
+  
+<header class="main_h">
+
+    <div class="row">
+        <a class="logo" href="#">P/F</a>
+
+        <div class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href=".sec01">HOME</a></li>
+                <li><a href=".sec02">Section 02</a></li>
+                <li><a href=".sec03">Section 03</a></li>
+                <li><a href=".sec04">Section 04</a></li>
+            </ul>
+        </nav>
+
+    </div> <!-- / row -->
+
+</header>
+
+<div class="hero">
+
+    <h1 class="ui header">   
+        <%= link_to image_tag("notflix.png", size: "500x200"), welcome_path %>
+      </h1>
+
+    <div class="mouse">
+        <span></span>
+    </div>
+
+</div>
+
     <%= yield %>
   </body>
 </html>
