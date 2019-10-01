@@ -5,9 +5,11 @@ class ShowsController < ApplicationController
     
 
     @shows = Show.all.sort_by{ |show| show.genre}
-    @comedies = Show.all.select { |show| show.genre == "Comedy" }
-    @mysteries = Show.all.select { |show| show.genre == "Mystery" }
-    @young_adult = Show.all.select { |show| show.genre == "Young Adult" }
+    
+    @comedies = Show.all.select { |show| show.genre == "Comedy" }.take(4)
+    @mysteries = Show.all.select { |show| show.genre == "Mystery" }.take(4)
+    @young_adult = Show.all.select { |show| show.genre == "Young Adult" }.take(4)
+    @action = Show.all.select { |show| show.genre == "Action" }.take(4)
     
   end
 
