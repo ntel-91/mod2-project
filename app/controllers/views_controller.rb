@@ -9,6 +9,10 @@ class ViewsController < ApplicationController
   end
 
   def create
+    @episode = params[:view][:episode]
+    @user_id = session[:user]["id"]
+    View.create(user_id: @user_id, episode_id: @episode)
+    redirect_to episode_path(@episode)
   end
 
   def edit
