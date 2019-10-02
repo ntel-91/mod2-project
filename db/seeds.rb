@@ -30,7 +30,7 @@ zach_galifianakis = Show.create!(show_name: "Zach Galifianakis", genre: "Comedy"
      dark_phoenix = Show.create!(show_name: "X-Men: Dark Phoenix", genre: "Action", show_cover: "https://www.microcapobserver.com/root_upld/general-news/2019/06/ART576325909127479/org_40096201906141233.jpg")
        highlander = Show.create!(show_name: "Highlander", genre: "Action", show_cover: "https://www.originalposter.co.uk/uploads/938991725444793_mainphotos.jpg")
         lion_king = Show.create!(show_name: "The Lion King ", genre: "Young Adult", show_cover: "https://images.justwatch.com/backdrop/243658/s1440/the-lion-king")
-           frozen = Show.create!(show_name: "Frozen", genre: "Young Adult", show_cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLgXorTFlDR3wwLTryFekDBxKSaCc80kWmWlDKCCbbZtSwT8wxhw")
+           frozen = Show.create!(show_name: "Frozen", genre: "Young Adult", show_cover: "https://hdqwalls.com/download/elsa-in-frozen-1920x1080.jpg")
           aladdin = Show.create!(show_name: "Aladdin", genre: "Young Adult", show_cover: "https://i0.wp.com/hnentertainment.co/wp-content/uploads/2019/06/DISNEY_GUY-RITCHIE_ALADDIN_500-MILLION_.jpg?fit=1484%2C742&ssl=1")
           aquaman = Show.create!(show_name: "Aquaman", genre: "Action", show_cover: "https://www.geek.com/wp-content/uploads/2018/11/Home-is-Calling-Aquaman-Poster-690-625x352.jpg")
 # Show.create!(show_name: "", genre: "", show_cover: "")

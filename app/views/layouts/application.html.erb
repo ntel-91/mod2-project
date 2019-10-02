@@ -8,20 +8,18 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-     <!-- <div class="ui sizer vertical segment">
-        <h1 class="ui header">   
-      <%= link_to image_tag("notflix.png", size: "200x50"), welcome_path %>
-    </h1>
-        <h3>----------Sold exclusively by men who also sell shrimp out of the back of a van-----------</h3>
-        <h1>_______________________________________________________________________________________________________________</h1>
-    </div> --> 
+     
 
-     <div class="container indigo topLeftBorders">
+    <div class="container indigo topLeftBorders">
         <%= link_to image_tag("notflix.png", size: "100x20"), welcome_path %>
         <a>TV Shows</a>
         <a>Movies</a>
         <%= link_to "Logout", logout_path, :method => :get %>
-      </div> 
+        <%= form_tag welcome_path, method: :get do %>
+        <%= text_field_tag(:search, params[:search], placeholder: 'search...') %>
+        <% end %>  
+    </div> 
+
   </head>
 
   <body>
@@ -30,12 +28,11 @@
 <link href='style.css' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
 
-  
-
-
-
 </div>
 
-    <%= yield %>
+
+
+<%= yield %>
+
   </body>
 </html>

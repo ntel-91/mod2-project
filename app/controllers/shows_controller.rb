@@ -5,13 +5,10 @@ class ShowsController < ApplicationController
     @user_views = View.all.select{ |view| view.user_id == @user['id']}.reverse
     episodes = @user_views.map { |view| Episode.find_by(id: view.episode_id) }
     @show = episodes.map{ |episode| Show.find_by(id: episode.show_id) }.uniq
+    
+    @search_shows = Show.all
 
     
-
-    # @user_views.each do |view|
-    #   episode = Episode.find_by(id: view.episode_id)
-    #   <h1><%= link_to episode.episode_name, episode.video_link %></h1>
-    # end
     @test = Show.all
     @comedies = Show.all.select { |show| show.genre == "Comedy" }
     @mysteries = Show.all.select { |show| show.genre == "Mystery" }
