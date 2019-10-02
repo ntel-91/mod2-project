@@ -2,7 +2,7 @@
     -moz-background-size: cover;
     background-size: cover;">
 
-        <!-- <h1 class="ui header">   
+<!-- <h1 class="ui header">   
             <%= link_to image_tag("notflix.png", size: "500x200"), welcome_path %>
           </h1>
     
@@ -16,13 +16,13 @@
 
 <h1><%= @show.show_name %></h1>
 
-<h1>last Episode Viewed</h1>
+<!-- <h1>Last Episode Viewed</h1>
     <% @user_views.each do |view| %>
     <% episode = Episode.find_by(id: view.episode_id) %>
         <% if episode.show_id == @show.id %>
             <h1><%= link_to episode.episode_name, episode.video_link %></h1>
         <% end %>
-<% end %>
+<% end %> -->
 
 <% @episodes.each do |episode| %>
     <h1><%= form_with model: View.create do |f| %>
@@ -31,4 +31,5 @@
         <% end %>
     </h1>
 <% end %>
+
 

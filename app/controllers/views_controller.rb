@@ -19,6 +19,8 @@ class ViewsController < ApplicationController
   end
 
   def update
+    byebug
+    redirect_to welcome_path
   end
 
   def destroy

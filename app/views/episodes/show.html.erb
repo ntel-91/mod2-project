@@ -21,3 +21,12 @@
 
 <br>
 Create Review
+
+<%= form_with model: @view do |f| %>
+    <%= f.text_area :review %><br>
+    <%= f.submit "Add Review" %>
+<% end %>
+
+Episode Reviews
+
+

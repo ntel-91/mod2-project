@@ -5,6 +5,8 @@ class EpisodesController < ApplicationController
   
     def show
         @episode = Episode.find(params[:id])
+        @user = session[:user]
+        @view = View.all.select{ |v| v.user_id == @user["id"] && v.episode_id == @episode.id}.last
     end
   
     def new
