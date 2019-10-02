@@ -12,11 +12,11 @@ class ShowsController < ApplicationController
     #   episode = Episode.find_by(id: view.episode_id)
     #   <h1><%= link_to episode.episode_name, episode.video_link %></h1>
     # end
-    
-    @comedies = Show.all.select { |show| show.genre == "Comedy" }.take(4)
-    @mysteries = Show.all.select { |show| show.genre == "Mystery" }.take(4)
-    @young_adult = Show.all.select { |show| show.genre == "Young Adult" }.take(4)
-    @action = Show.all.select { |show| show.genre == "Action" }.take(4)
+    @test = Show.all
+    @comedies = Show.all.select { |show| show.genre == "Comedy" }
+    @mysteries = Show.all.select { |show| show.genre == "Mystery" }
+    @young_adult = Show.all.select { |show| show.genre == "Young Adult" }
+    @action = Show.all.select { |show| show.genre == "Action" }
     
   end
 

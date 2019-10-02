@@ -21,6 +21,116 @@
 
 
 
+
+
+
+
+// sliders------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+.contain {
+  width: 100%;
+  height: 120px
+}
+.row {
+  overflow: scroll;
+  width: 100%;
+}
+.row__inner {
+  transition: 450ms transform;
+  font-size: 0;
+  white-space: nowrap;
+  margin: 70.3125px 0;
+  padding-bottom: 10px;
+}
+.tile {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 140.625px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+}
+.tile__img {
+  width: 250px;
+  height: 140.625px;
+  object-fit: cover;
+}
+.tile__details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  transition: 450ms opacity;
+}
+.tile__details:after,
+.tile__details:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: rgb(29, 29, 29);
+}
+.tile__details:after {
+  margin-top: -25px;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #000000;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+.tile__details:before {
+  content: '▶';
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  margin-left: 7px;
+  margin-top: -18px;
+  text-align: center;
+  z-index: 2;
+}
+.tile:hover .tile__details {
+  opacity: 1;
+}
+.tile__title {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+.row__inner:hover {
+  transform: translate3d(-62.5px, 0, 0);
+}
+.row__inner:hover .tile {
+  opacity: 0.3;
+}
+.row__inner:hover .tile:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+.tile:hover ~ .tile {
+  transform: translate3d(125px, 0, 0);
+}
+
+
+
+
+
+// sliders------------------------------------------------------------------------------------------------------------------------------------------------
+
+// navbar--------------------------------------------------------------------------------------------------------
 div.container
 {
     font-family: Raleway;
@@ -59,7 +169,7 @@ div.topLeftBorders a:before
     left: 0px;
     width: 2px;
     height: 0px;
-    background: #FFF;
+    background: rgb(0, 0, 0);
     content: "";
     opacity: 1;
     transition: all 0.3s;
@@ -72,7 +182,7 @@ div.topLeftBorders a:after
     left: 0px;
     width: 100%;
     height: 2px;
-    background: #FFF;
+    background: rgb(0, 0, 0);
     content: "";
     opacity: 1;
     transition: all 0.3s;
@@ -89,7 +199,7 @@ div.topLeftBorders a:hover:after
     top: 100%;
 }
 
-
+// navbar--------------------------------------------------------------------------------------------------------
 
 
 
@@ -97,6 +207,8 @@ div.topLeftBorders a:hover:after
 //     background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d0/Elegant_Background-3.jpg");
 //     background-color: #cccccc;
 //  }
+
+// paralax background------------------------------------------------------------------------------------------
 
  .main_h {
   position: fixed;
@@ -194,43 +306,8 @@ nav ul a {
   font-size: 12px;
 }
 
-.mobile-toggle {
-  display: none;
-  cursor: pointer;
-  font-size: 20px;
-  position: absolute;
-  right: 22px;
-  top: 0;
-  width: 30px;
-  -webkit-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in;
-  transition: all 200ms ease-in;
-}
-@media only screen and (max-width: 766px) {
-  .mobile-toggle {
-    display: block;
-  }
-}
-.mobile-toggle span {
-  width: 30px;
-  height: 4px;
-  margin-bottom: 6px;
-  border-radius: 1000px;
-  background: #8f8f8f;
-  display: block;
-}
 
-.row {
-  width: 100%;
-  max-width: 940px;
-  margin: 0 auto;
-  position: relative;
-  padding: 0 2%;
-}
 
-* {
-  box-sizing: border-box;
-}
 
 
 body {
@@ -270,7 +347,7 @@ p {
   -moz-background-size: cover;
   background-size: cover;
   text-align: center;
-  color: #fff;
+  color: rgb(0, 0, 0);
   padding-top: 110px;
   min-height: 500px;
   letter-spacing: 2px;
@@ -285,7 +362,7 @@ p {
   -moz-background-size: cover;
   background-size: cover;
   text-align: center;
-  color: #fff;
+  color: rgb(0, 0, 0);
   padding-top: 110px;
   min-height: 500px;
   letter-spacing: 2px;
@@ -363,6 +440,8 @@ p {
     transform: translateY(20px);
   }
 }
+
+// paralax background------------------------------------------------------------------------------------------
 
  
 
