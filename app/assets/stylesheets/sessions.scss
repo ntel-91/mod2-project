@@ -1,3 +1,57 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.hero_login {
+    position: relative;
+    opacity: 1;
+    background: linear-gradient(#030303, #0000007a, transparent), url('https://wallpaperaccess.com/full/17520.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding-top: 110px;
+    min-height: 600px;
+    letter-spacing: 2px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+
+.login {
+    width: 350px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-left: -175px;
+  }
+
+  .text {
+    text-transform: uppercase;
+    background: linear-gradient( #790000 0%, #ff0101 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font: 60px Raleway;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .create_text {
+    text-transform: uppercase;
+    background: linear-gradient( #790000 0%, #ff0101 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font: 30px Raleway;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+
+  h3 {
+    font: 40px Raleway;
+    color: rgb(199, 194, 194)
+  }
+
+ 

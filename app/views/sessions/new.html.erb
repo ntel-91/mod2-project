@@ -1,12 +1,23 @@
-<h2> Welcome! </h2>
+<div class="hero_login">
+
+       
+    <div class="login">
+    
+        <h2 class="text"> Welcome </h2>
+    
+    <h3></h3->
+    <%= form_with do %>
+        <label>Username:</label>
+        <%= text_field_tag :username %><br>
+        <label> Password:</label>
+        <%= password_field_tag :password %>
+        <%= submit_tag "Login" %>
+    <% end %>
+    <h3>Don't have an account? <%= link_to "Sign up here", new_user_path %></h3>
+    
+    </div>
+    
+    </div>
 
 
-Sign in:
-<%= form_with do %>
-    <label>Username:</label>
-    <%= text_field_tag :username %><br>
-    <label>Password:</label>
-    <%= password_field_tag :password %>
-    <%= submit_tag "Login" %>
-<% end %>
-Don't have an account? Sign up <%= link_to "here", new_user_path %>
+

@@ -1,5 +1,7 @@
-<h1>Users    create form</h1>
+<div class="hero_login">
 
+<h2 class="create_text"> create an account</h2>
+<h3>
 <%= form_with model: @user do |f| %>
     <label> Username: </label>
     <%= f.text_field :username %><br>
@@ -11,3 +13,6 @@
     <%= f.text_field :password %><br>
     <%= f.submit "Create Account" %>
 <% end %>
+</h3>
+
+</div>
