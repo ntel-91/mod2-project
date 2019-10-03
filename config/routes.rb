@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
+  #episode routes
+  resources :episodes, only: [:index]
+  get '/episodes/:id', to: 'episodes#show', as: 'episode'
+
   
-  resources :episodes, only: [:show, :index]
   # post '/episodes', to: 'episodes#create', as: 'create_view'
   resources :shows, only: [:show, :destroy, :create]
   get '/login',  to: 'sessions#new', as: 'login'
@@ -12,6 +15,7 @@ Rails.application.routes.draw do
   get '/login', to: 'users#login'
   resources :views, only: [:show, :index]
   post '/views', to: 'views#create'
+  patch '/views/:id', to: 'views#update', as: 'update_view'
   # post '/views', to: 'views#create', as: 'create_view'
   
   resources :user_shows

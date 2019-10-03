@@ -6,7 +6,7 @@ Sign in:
     <label>Username:</label>
     <%= text_field_tag :username %><br>
     <label>Password:</label>
-    <%= text_field_tag :password %>
+    <%= password_field_tag :password %>
     <%= submit_tag "Login" %>
 <% end %>
 Don't have an account? Sign up <%= link_to "here", new_user_path %>

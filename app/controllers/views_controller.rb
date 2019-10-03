@@ -19,8 +19,9 @@ class ViewsController < ApplicationController
   end
 
   def update
-    byebug
-    redirect_to welcome_path
+    @view = View.find(params[:id])
+    @view.update(review: params[:view][:review])
+    redirect_to episode_path(@view.episode_id)
   end
 
   def destroy
