@@ -2,12 +2,12 @@
         <div class="left-nav-container">
             <div class="nav-elements">
             <%= link_to image_tag("notflix.png", size: "100x20"), welcome_path %>
-            <%= link_to "TV Shows", tv_shows_path, :method => :get %>
-            <%= link_to "Movies", movies_path, :method => :get %>
+            <a class="nav-btn" href="tv_shows">TV Shows</a>
+            <a class="nav-btn" href="movies">Movies</a>
             </div>
         </div>
         <div class="right-nav-container">
-            <%= link_to "Logout", logout_path, :method => :get %>
+            <%= link_to "Logout", logout_path, :method => :get, class: "nav-btn" %>
             <%= form_tag welcome_path, method: :get do %>
             <%= text_field_tag(:search, params[:search], placeholder: 'search...') %>
             <% end %>  

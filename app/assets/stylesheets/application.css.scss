@@ -18,6 +18,10 @@
 @import "semantic-ui";
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 
+::-webkit-scrollbar { 
+  display: none; 
+}
+
 
 
 
@@ -52,17 +56,17 @@
 
 .contain {
   width: 100%;
-  height: 120px
+  // height: 120px
 }
 .row {
-  overflow: scroll;
+  overflow: auto;
   width: 100%;
 }
 .row__inner {
   transition: 450ms transform;
   font-size: 0;
   white-space: nowrap;
-  margin: 70.3125px 0;
+  margin: 36.3125px 0;
   padding-bottom: 10px;
 }
 .tile {
@@ -236,19 +240,28 @@ div.left-nav-container a:after
     transition: all 0.3s;
 }
 
-div.left-nav-container a:hover:before
+div.left-nav-container .nav-btn:hover:before
 {
     height: 75%;
 }
 
-div.left-nav-container a:hover:after
+div.left-nav-container .nav-btn:hover:after
 {
     opacity: 1;
     top: 75%;
 }
 
+// search background-------------------------------------------------------------------
 
-div.right-nav-container  a
+div.right-nav-container input[type="text"] {
+    background: transparent;
+    border: none;
+    color: unset;
+}
+
+// search background-------------------------------------------------------------------
+
+div.right-nav-container  .nav-btn
 {
     color: #FFF;
     text-decoration: none;
@@ -259,7 +272,7 @@ div.right-nav-container  a
     z-index: 0;
     cursor: pointer;
 }
-div.right-nav-container a:before
+div.right-nav-container .nav-btn:before
 {
     position: absolute;
     top: 0px;
@@ -272,7 +285,7 @@ div.right-nav-container a:before
     transition: all 0.3s;
 }
 
-div.right-nav-container a:after
+div.right-nav-container .nav-btn:after
 {
     position: absolute;
     top: 50px;
@@ -285,16 +298,76 @@ div.right-nav-container a:after
     transition: all 0.3s;
 }
 
-div.right-nav-container a:hover:before
+div.right-nav-container .nav-btn:hover:before
 {
     height: 80%;
 }
 
-div.right-nav-container a:hover:after
+div.right-nav-container .nav-btn:hover:after
 {
     opacity: 1;
     top: 80%;
 }
+
+// div.right-nav-container  input#search.form_background
+// {
+//     color: #FFF;
+//     text-decoration: none;
+//     font: 20px Raleway;
+//     margin: 0px 10px;
+//     padding: 10px 10px;
+//     position: relative;
+//     z-index: 0;
+//     cursor: pointer;
+// }
+// div.right-nav-container input#search.form_background:before
+// {
+//     position: absolute;
+//     top: 0px;
+//     left: 0px;
+//     width: 2px;
+//     height: 0px;
+//     background: #FFF;
+//     content: "";
+//     opacity: 1;
+//     transition: all 0.3s;
+// }
+
+// div.right-nav-container input#search.form_background:after
+// {
+//     position: absolute;
+//     top: 50px;
+//     left: 0px;
+//     width: 100%;
+//     height: 2px;
+//     background: #FFF;
+//     content: "";
+//     opacity: 1;
+//     transition: all 0.3s;
+// }
+
+// div.right-nav-container input#search.form_background:hover:before
+// {
+//     height: 80%;
+// }
+
+// div.right-nav-container input#search.form_background:hover:after
+// {
+//     opacity: 1;
+//     top: 80%;
+// }
+
+
+
+
+
+
+.form_background {
+  background-color: transparent;
+  font: white;
+  border: transparent;
+}
+
 
 
 // navbar--------------------------------------------------------------------------------------------------------
@@ -329,8 +402,8 @@ a {
 }
 
 h1 {
-  font-size: 30px;
-  line-height: 1.8;
+  font-size: 35px;
+  line-height: 0;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
 }
