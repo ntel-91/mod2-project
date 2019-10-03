@@ -155,7 +155,7 @@ div.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #000000;
+  background: linear-gradient(rgb(73, 73, 73), rgba(0, 0, 0, 0.74));
   font: 20px Raleway;
 
 }
@@ -347,17 +347,19 @@ p {
 
 .hero {
   position: relative;
-  background: url('http://shoppopgallery.com/wp-content/uploads/2019/06/anime-wallpaper-website-69-image-collections-of-wallpapers-harmonious-websites-entertaining-10.jpg') no-repeat center center fixed;
+  opacity: 1;
+  background: linear-gradient(#030303, #0000007a, transparent), url('http://shoppopgallery.com/wp-content/uploads/2019/06/anime-wallpaper-website-69-image-collections-of-wallpapers-harmonious-websites-entertaining-10.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   text-align: center;
   color: rgb(0, 0, 0);
   padding-top: 110px;
-  min-height: 500px;
+  min-height: 600px;
   letter-spacing: 2px;
   font-family: "Montserrat", sans-serif;
 }
+
 
 
 .hero_show {
