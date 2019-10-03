@@ -1,6 +1,5 @@
 class ShowsController < ApplicationController
-  def welcome
-    
+  def welcome    
     @user = session[:user]
     @user_views = View.all.select{ |view| view.user_id == @user['id']}.reverse
     episodes = @user_views.map { |view| Episode.find_by(id: view.episode_id) }
@@ -14,6 +13,7 @@ class ShowsController < ApplicationController
     @young_adult = Show.all.select { |show| show.genre == "Young Adult" }
     @action = Show.all.select { |show| show.genre == "Action" }
     
+    @ugly = false
   end
 
   def genres_page

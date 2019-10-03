@@ -61,6 +61,7 @@
 .row {
   overflow: auto;
   width: 100%;
+  margin-top: -29px;
 }
 .row__inner {
   transition: 450ms transform;
@@ -391,10 +392,13 @@ div.right-nav-container .nav-btn:hover:after
 body {
   color: #8f8f8f;
   // background-image: url("https://www.stockvault.net/data/2018/06/05/252333/preview16.jpg");
-  background: radial-gradient( rgba(0, 0, 0, 0.904), rgb(0, 0, 0));
+  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.616));
   font-family: "Cardo", serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 a {
@@ -406,6 +410,7 @@ h1 {
   line-height: 0;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
+  margin-top: -1em;
 }
 
 p {
