@@ -537,11 +537,8 @@ p {
 }
 
 .video-center {
-  
-  position: absolute; /* positions out of the flow, but according to the nearest parent */
-  right: 0; /* confuse it i guess */
-  left: 0;
-  margin: auto; /* make em equal */
+  display: flex;
+  justify-content: center;
 }
 
 // #####------------------------------------------------------------------------------------------------------------------------------------------------
