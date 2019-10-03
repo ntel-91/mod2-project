@@ -16,26 +16,46 @@
     
 
 
-
+<br>
+<br>
 <h1><%= @episode.episode_name %></h1>
 
-<iframe width="560" height="315" src='https://www.youtube.com/embed/<%= @episode_id %>' allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<div style="text-align: center;">
+    <iframe width="700" height="455" src='https://www.youtube.com/embed/<%= @episode_id %>' allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 <br>
 
-<h1>Create Review</h1>
+<div class="video-center">
+    <div class="ui comments" style="width: 600px">
+    <h3 class="ui dividing header" style="color: white; font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;">Comments</h3>
+        <% @reviews.each do |r| %>
+            <div>
+            <div class="comment" id="commentbox">
+                    <div>
+                        <a class="author" style="margin: 10px; color: white; font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;"><%=r.user.username%></a>
+                        <div class="metadata">
+                            <span class="date" style="color: white; font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;"><%=r.updated_at.strftime("%A, %b %d, %l:%M %p")%></span>
+                        </div>
+                        <div style="margin: 10px; color: white; font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;">
+                            <%= r.review %>
+                        </div>
+                    </div>
+            </div>
+            </div>
+        <% end %>
+    </div>
+</div>
 
-<%= form_with model: @view do |f| %>
-    <%= f.text_area :review, :value => "" %><br>
-    <%= f.submit "Add Review" %>
-<% end %>
-
-<h1>Episode Reviews</h1>
-
-<% @reviews.reverse.each do |r| %>
-    <p><%= r.review %></p>
-<% end %>
-
+<div class="video-center">
+    <%= form_with model: @view do |f| %>
+        <%= f.text_area :review, 
+                :value => "", 
+                :style => 'background-color: black; color: white;',
+                size: "90x5",
+                :placeholder => "add comment..." %><br>
+        <%= f.submit "Comment", :style => 'background-color: black; color: white;' %>
+    <% end %>
+</div>
 
 
 
