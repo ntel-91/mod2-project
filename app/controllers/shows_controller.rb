@@ -9,7 +9,6 @@ class ShowsController < ApplicationController
     @search_shows = Show.all
 
     
-    @test = Show.all
     @comedies = Show.all.select { |show| show.genre == "Comedy" }
     @mysteries = Show.all.select { |show| show.genre == "Mystery" }
     @young_adult = Show.all.select { |show| show.genre == "Young Adult" }
@@ -27,6 +26,20 @@ class ShowsController < ApplicationController
 
     @user = session[:user]
     @user_views = View.all.select{ |view| view.user_id == @user['id']}.reverse
+  end
+
+  def tv_shows
+    @comedies = Show.all.select { |show| show.show_or_movie == true && show.genre == "Comedy"}
+    @mysteries = Show.all.select { |show| show.show_or_movie == true && show.genre == "Mystery" }
+    @young_adult = Show.all.select { |show| show.show_or_movie == true && show.genre == "Young Adult" }
+    @action = Show.all.select { |show| show.show_or_movie == true && show.genre == "Action" }
+  end
+
+  def movies
+    @comedies = Show.all.select { |show| show.show_or_movie == false && show.genre == "Comedy"}
+    @mysteries = Show.all.select { |show| show.show_or_movie == false && show.genre == "Mystery" }
+    @young_adult = Show.all.select { |show| show.show_or_movie == false && show.genre == "Young Adult" }
+    @action = Show.all.select { |show| show.show_or_movie == false && show.genre == "Action" }
   end
 
   def new
