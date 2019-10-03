@@ -1,3 +1,19 @@
+<div class="nav-container">
+        <div class="left-nav-container">
+            <div class="nav-elements">
+            <%= link_to image_tag("notflix.png", size: "100x20"), welcome_path %>
+            <a href="tv_shows">TV Shows</a>
+            <a href="movies">Movies</a>
+            </div>
+        </div>
+        <div class="right-nav-container">
+            <%= link_to "Logout", logout_path, :method => :get %>
+            <%= form_tag welcome_path, method: :get do %>
+            <%= text_field_tag(:search, params[:search], placeholder: 'search...') %>
+            <% end %>  
+        </div> 
+    </div>
+    
 <div class="hero">
 
         <h1 class="ui header">   
