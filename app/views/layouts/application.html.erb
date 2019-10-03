@@ -7,18 +7,34 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+ 
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
 
-     
+  </head>
 
-    <div class="container indigo topLeftBorders">
+  <body>
+
+
+
+
+<div class="nav-container">
+    <div class="left-nav-container">
+        <div class="nav-elements">
         <%= link_to image_tag("notflix.png", size: "100x20"), welcome_path %>
-        <a>TV Shows</a>
-        <a>Movies</a>
+        <a href="tv_shows_path">TV Shows</a>
+        <a href="movies_path">Movies</a>
+        </div>
+    </div>
+    <div class="right-nav-container">
         <%= link_to "Logout", logout_path, :method => :get %>
         <%= form_tag welcome_path, method: :get do %>
         <%= text_field_tag(:search, params[:search], placeholder: 'search...') %>
         <% end %>  
     </div> 
+</div>
+
 
   </head>
 

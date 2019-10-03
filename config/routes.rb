@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/welcome', to: 'shows#welcome', as: 'welcome'
   get '/genres', to: 'shows#genres_page', as: 'genres'
   get '/login', to: 'users#login'
+  get '/tv_shows', to: 'shows#tv_shows', as: 'tv_shows'
+  get '/movies', to: 'shows#movies', as: 'movies'
   resources :views, only: [:show, :index]
   post '/views', to: 'views#create'
   # post '/views', to: 'views#create', as: 'create_view'
