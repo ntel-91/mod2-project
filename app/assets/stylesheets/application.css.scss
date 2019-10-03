@@ -98,7 +98,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  display: rgb(29, 29, 29);
+  display: rgb(0, 0, 0);
 }
 .tile__details:after {
   margin-top: -25px;
@@ -109,7 +109,7 @@
   line-height: 50px;
   text-align: center;
   border-radius: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgb(0, 0, 0);
   z-index: 1;
 }
 .tile__details:before {
@@ -196,6 +196,8 @@ div.right-nav-container {
 
 /* Top border go down and Left border appears */
 
+// div.left-nav-bar:not(#notflix)
+
 div.left-nav-container  a
 {
     color: #FFF;
@@ -206,6 +208,7 @@ div.left-nav-container  a
     position: relative;
     z-index: 0;
     cursor: pointer;
+
 }
 div.left-nav-container a:before
 {
@@ -315,7 +318,7 @@ div.right-nav-container a:hover:after
 body {
   color: #8f8f8f;
   // background-image: url("https://www.stockvault.net/data/2018/06/05/252333/preview16.jpg");
-  background-color: #000000;
+  background: radial-gradient( rgba(0, 0, 0, 0.904), rgb(0, 0, 0));
   font-family: "Cardo", serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;

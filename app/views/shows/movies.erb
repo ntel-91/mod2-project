@@ -10,16 +10,131 @@
     
     </div>
 
-    <% @movies.map do |show| %>
-        
+
+
+    <%if params[:search]%>
+    <br>
+    <br>
+    <br>
+        <h2 style="color:rgb(255, 0, 0);text-align:center;">Search results:</h2>
+    <% shows = @search_shows.select{|show| show.show_name.downcase.include? params[:search.downcase] }%>
+    
+    <%if shows.empty?%>
+    
+      <h2 style="color:rgb(255, 0, 0);text-align:center;">Nothing Matches Your Search Terms</h2>
+    <%else%>
+        <% shows.map do |show| %>
+              <%= link_to image_tag(show.show_cover, size: "260x150"), tv_shows_path %>
+        <% end %>
+    <% end %>
+    
+    <%end%>
+
+<br>
+     
+<div class="contain">
+<div class="row">
+    <div class="row__inner">
+            <h1>Comedy</h1>
+
+        <% @comedies.map do |show| %>
+
         <div class="tile">
             <div class="tile__media">
-  
+
                     <a href="<%= show_path(show.id)%>">
                     <img class="tile__img" src="<%= show.show_cover %>"  />
-                    </a>
-                    
+                     </a>
+
             </div>
         </div>
-  
-    <% end %>
+
+        <% end %>
+
+    </div>
+</div>
+</div>  
+
+<br>
+<br>
+<br>
+<br>
+<br>      
+<div class="contain">
+<div class="row">
+    <div class="row__inner">
+            <h1>Mystery</h1>
+
+        <% @mysteries.map do |show| %>
+
+        <div class="tile">
+            <div class="tile__media">
+
+                    <a href="<%= show_path(show.id)%>">
+                    <img class="tile__img" src="<%= show.show_cover %>"  />
+                     </a>
+
+            </div>
+        </div>
+
+        <% end %>
+
+    </div>
+</div>
+</div>  
+
+<br>
+<br>
+<br>
+<br>
+<br>       
+<div class="contain">
+<div class="row">
+    <div class="row__inner">
+            <h1>Young Adult</h1>
+
+        <% @young_adult.map do |show| %>
+
+        <div class="tile">
+            <div class="tile__media">
+
+                    <a href="<%= show_path(show.id)%>">
+                    <img class="tile__img" src="<%= show.show_cover %>"  />
+                     </a>
+
+            </div>
+        </div>
+
+        <% end %>
+
+    </div>
+</div>
+</div>  
+
+<br>
+<br>
+<br>
+<br>
+<br>      
+<div class="contain">
+<div class="row">
+    <div class="row__inner">
+        <h1>Action</h1>
+        
+            <% @action.map do |show| %>
+
+            <div class="tile">
+                <div class="tile__media">
+
+                        <a href="<%= show_path(show.id)%>">
+                        <img class="tile__img" src="<%= show.show_cover %>"  />
+                         </a>
+
+                </div>
+            </div>
+
+            <% end %>
+
+        </div>
+    </div>
+</div>  

@@ -36,7 +36,10 @@ class ShowsController < ApplicationController
   end
 
   def movies
-    @movies = Show.all.select{ |show| show.show_or_movie == false}
+    @comedies = Show.all.select { |show| show.show_or_movie == false && show.genre == "Comedy"}
+    @mysteries = Show.all.select { |show| show.show_or_movie == false && show.genre == "Mystery" }
+    @young_adult = Show.all.select { |show| show.show_or_movie == false && show.genre == "Young Adult" }
+    @action = Show.all.select { |show| show.show_or_movie == false && show.genre == "Action" }
   end
 
   def new
