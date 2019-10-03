@@ -451,8 +451,27 @@ p {
 // paralax background------------------------------------------------------------------------------------------
 
  
+// comments------------------------------------------------------------------------------------------------------------------------------------------------
 
+#commentbox {
+  border-top: 2px solid grey;
+  margin-right: 10px;
+  margin-left: 10px;
+}
 
+#author {
+  margin-right: 10px;
+}
+
+.video-center {
+  
+  position: absolute; /* positions out of the flow, but according to the nearest parent */
+  right: 0; /* confuse it i guess */
+  left: 0;
+  margin: auto; /* make em equal */
+}
+
+// #####------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
