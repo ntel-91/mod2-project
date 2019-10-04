@@ -2,12 +2,12 @@
         <div class="left-nav-container">
             <div class="nav-elements">
             <%= link_to image_tag("notflix.png", size: "100x20"), welcome_path %>
-            <a href="tv_shows">TV Shows</a>
-            <a href="movies">Movies</a>
+            <a class="nav-btn" href="<%=tv_shows_path%>">TV Shows</a>
+            <a class="nav-btn" href="<%=movies_path%>">Movies</a>
             </div>
         </div>
         <div class="right-nav-container">
-            <%= link_to "Logout", logout_path, :method => :get %>
+            <%= link_to "Logout", logout_path, :method => :get, class: "nav-btn" %>
             <%= form_tag welcome_path, method: :get do %>
             <%= text_field_tag(:search, params[:search], placeholder: 'search...') %>
             <% end %>  
@@ -15,38 +15,49 @@
     </div>
     
 
-<div class="hero_show" id="<%=@show.show_cover%>" style="background: url(<%=@show.show_cover%>) no-repeat center center fixed;  -webkit-background-size: cover;
+<div class="hero_show" id="<%=@show.show_cover%>" style="background: linear-gradient(to top, #000000, #3b3b3b94, transparent),url(<%=@show.show_cover%>) no-repeat center center fixed;  -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;">
+    background-size: cover;
+    opacity: 1;">
+ </div>
 
-<!-- <h1 class="ui header">   
-            <%= link_to image_tag("notflix.png", size: "500x200"), welcome_path %>
-          </h1>
-    
-        <div class="mouse">
-            <span></span>
-        </div> -->
-    
-    </div>
 
-<!-- <%= image_tag(@show.show_cover, size: "300x250") %> -->
 
-<h1><%= @show.show_name %></h1>
 
-<!-- <h1>Last Episode Viewed</h1>
+
+<% if @user_views.empty? %>
+<% byebug %>
+<% else %>
+<h1 style="font-size: 3em; text-align:center;">Last Episode Viewed</h1>
     <% @user_views.each do |view| %>
     <% episode = Episode.find_by(id: view.episode_id) %>
         <% if episode.show_id == @show.id %>
-            <h1><%= link_to episode.episode_name, episode.video_link %></h1>
+            <h1 class="h1s"><%= link_to episode.episode_name, episode.video_link %></h1>
         <% end %>
-<% end %> -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <% end %>
+<% end %>
+
+<h1 class="h1s" style="text-align:center;">Episodes</h1>
+<% @episodes.map do |episode| %>
+<h1 class="h1s" style="text-align:center;"><%= link_to episode.episode_name, episode_path(episode.id) %></h1>
+<% end %>
+
+
+
+
 
 <% @episodes.each do |episode| %>
-    <h1><%= form_with model: View.create do |f| %>
+        <%= form_with model: View.create do |f| %>
         <%= f.hidden_field :episode, value: episode.id %>
         <%= f.submit episode.episode_name %>
         <% end %>
-    </h1>
+  
 <% end %>
 
 

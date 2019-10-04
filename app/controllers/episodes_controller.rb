@@ -5,10 +5,12 @@ class EpisodesController < ApplicationController
   
     def show
         @episode = Episode.find(params[:id])
+        @show = Show.find_by(id: @episode.show_id)
         @user = session[:user]
         @episode_id = @episode.video_link.partition('v=').last
         @view = View.all.select{ |v| v.user_id == @user["id"] && v.episode_id == @episode.id}.last
         @reviews = View.all.select{ |v| v.episode_id == @episode.id && v.review != nil}
+        
     end
   
     def create

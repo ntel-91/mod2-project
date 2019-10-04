@@ -13,7 +13,11 @@ class ShowsController < ApplicationController
     @young_adult = Show.all.select { |show| show.genre == "Young Adult" }
     @action = Show.all.select { |show| show.genre == "Action" }
     
-    @ugly = false
+    if params[:ugly] == "1"
+      @ugly = true
+    else
+      @ugly = false
+    end
   end
 
   def genres_page
@@ -21,6 +25,7 @@ class ShowsController < ApplicationController
   end
 
   def show
+
     @show = Show.find(params[:id])
     @episodes = Episode.all.select{ |episodes| episodes.show_id == @show.id}
 

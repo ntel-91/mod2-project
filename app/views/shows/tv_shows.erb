@@ -17,7 +17,7 @@
 
 <div class="hero">
 
-        <h1 class="ui header">   
+        <h1 class="h1s" class="ui header">   
             <%= link_to image_tag("notflix.png", size: "500x200"), welcome_path %>
           </h1>
     
@@ -52,7 +52,7 @@
 <div class="contain">
 <div class="row">
     <div class="row__inner">
-            <h1>Comedy</h1>
+            <h1 class="h1s" class="h1_row">Comedy</h1>
 
         <% @comedies.map do |show| %>
 
@@ -80,7 +80,7 @@
 <div class="contain">
 <div class="row">
     <div class="row__inner">
-            <h1>Mystery</h1>
+            <h1 class="h1s" class="h1_row">Mystery</h1>
 
         <% @mysteries.map do |show| %>
 
@@ -108,7 +108,7 @@
 <div class="contain">
 <div class="row">
     <div class="row__inner">
-            <h1>Young Adult</h1>
+            <h1 class="h1s" class="h1_row">Young Adult</h1>
 
         <% @young_adult.map do |show| %>
 
@@ -136,7 +136,7 @@
 <div class="contain">
 <div class="row">
     <div class="row__inner">
-        <h1>Action</h1>
+        <h1 class="h1s" class="h1_row">Action</h1>
         
             <% @action.map do |show| %>
 
