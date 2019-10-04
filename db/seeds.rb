@@ -12,6 +12,9 @@ User.destroy_all
 # chip = User.create!(first_name: "Chip", last_name: "Whitley", username: "shaquille_oatmeal", password_digest: )
 ham = User.create!(first_name: "Ham", last_name: "Diglet", username: "bill_nye_the_russian_spy", password: "hamdiglet")
 chuck = User.create!(first_name: "chuck", last_name: "smith", username: "chucksmith", password: "chucksmith")
+dunken = User.create!(first_name: “dunken”, last_name: “murphy”, username: “bro”, password: “bro”)
+betsy = User.create!(first_name: “betsy”, last_name: “sloggy”, username: “sluggly”, password: “sluggly”)
+misty = User.create!(first_name: “misty”, last_name: “frod”, username: “let-it-go”, password: “let-it-go”)
 
 
 Show.destroy_all
@@ -114,10 +117,19 @@ UserShow.create!(user_id: ham.id, show_id: whats_happening.id)
 
 
 View.destroy_all
-View.create!(user_id: ham.id, episode_id: zg_1.id, review: "grest")
-View.create!(user_id: ham.id, episode_id: zg_2.id, review: "ok")
+View.create!(user_id: ham.id, episode_id: h_1.id, review: “first one!!“, updated_at: “2019-10-01 14:30:25”)
+View.create!(user_id: chuck.id, episode_id: h_1.id, review: “second one :(“, updated_at: “2019-10-01 14:35:25”)
+View.create!(user_id: betsy.id, episode_id: h_1.id, review: “this show is the best!“, updated_at: “2019-10-01 18:10:25”)
+View.create!(user_id: dunken.id, episode_id: h_1.id, review: “I think this show is the worst”, updated_at: “2019-10-02 11:32:25”)
+View.create!(user_id: betsy.id, episode_id: h_1.id, review: “bro, youre the worst”, updated_at: “2019-10-01 12:12:25”)
+View.create!(user_id: misty.id, episode_id: h_1.id, review: “dont forget to vote!“, updated_at: “2019-10-01 17:13:25”)
+View.create!(user_id: betsy.id, episode_id: h_1.id, review: “Rails, Rails, Rails!“, updated_at: “2019-10-01 20:53:25”)
+View.create!(user_id: betsy.id, episode_id: h_1.id, review: “Rails, Rails, Rails!“, updated_at: “2019-10-01 20:53:25”)
+View.create!(user_id: ham.id, episode_id: h_2.id, review: “first one again!“, updated_at: “2019-10-03 08:35:25”)
+View.create!(user_id: chuck.id, episode_id: h_2.id, review: “no one cares”, updated_at: “2019-10-03 10:35:25”)
+View.create!(user_id: betsy.id, episode_id: h_2.id, review: “woohoo”, updated_at: “2019-10-03 11:35:25”)
 View.create!(user_id: ham.id, episode_id: c_1.id)
-View.create!(user_id: ham.id, episode_id: h_1.id, review: "fine")
+View.create!(user_id: ham.id, episode_id: h_1.id, review: “fine”)
 View.create!(user_id: ham.id, episode_id: h_2.id)
-View.create!(user_id: ham.id, episode_id: h_3.id, review: "it was great")
-View.create!(user_id: ham.id, episode_id: wh_1.id, review: "Dynomite")
+View.create!(user_id: ham.id, episode_id: h_3.id, review: “it was great”)
+View.create!(user_id: ham.id, episode_id: wh_1.id, review: “Dynomite”)
