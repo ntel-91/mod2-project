@@ -30,12 +30,15 @@
 
 
 
-<% @episodes.each do |episode| %>
-        <%= form_with model: View.create do |f| %>
-        <%= f.hidden_field :episode, value: episode.id %>
-        <%= f.submit episode.episode_name %>
-        <% end %>
-  
-<% end %>
 
+ <% @episodes.each do |episode| %>
+    <div class="episodes">
+    
+            <%= form_with model: View.create do |f| %>
+            <%= f.hidden_field :episode, value: episode.id %>
+            <%= f.submit episode.episode_name, :style => 'background: transparent; color: white; border: transparent; font-size: 3rem; font-family: Raleway;' %> <br>
+            <% end %>
+    
+            </div>
+    <% end %>
 
