@@ -55,6 +55,8 @@
   width: 250px;
   height: 140.625px;
   object-fit: cover;
+  border: .3em lightgray;
+  border-style: outset;
 }
 .tile__details {
   position: absolute;
