@@ -89,6 +89,7 @@
   cursor: pointer;
   transition: 450ms all;
   transform-origin: center left;
+  border: 1em;
 }
 .tile__img {
   width: 250px;
@@ -346,8 +347,8 @@ div.right-nav-container .nav-btn:hover:after
 
 
 body {
-  color: #8f8f8f;
-  // background-image: url("https://www.stockvault.net/data/2018/06/05/252333/preview16.jpg");
+  
+  // background-image: url("https://media.giphy.com/media/3o7buijTqhjxjbEqjK/giphy.gif");
   background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.616));
   font-family: "Cardo", serif;
   font-weight: 300;
