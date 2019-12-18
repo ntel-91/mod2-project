@@ -382,7 +382,8 @@ p {
 .hero {
   position: relative;
   opacity: 1;
-  background: linear-gradient(#030303, #0000007a, transparent), url('http://shoppopgallery.com/wp-content/uploads/2019/06/anime-wallpaper-website-69-image-collections-of-wallpapers-harmonious-websites-entertaining-10.jpg') no-repeat center center fixed;
+  background: linear-gradient(#000000, #0000007a, transparent, transparent), url('https://images3.alphacoders.com/206/206199.jpg') no-repeat center center fixed;
+  // background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url('https://images3.alphacoders.com/206/206199.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -422,6 +423,8 @@ p {
   padding-bottom: 12px;
   line-height: 3;
 }
+
+
 
 .mouse {
   display: block;
