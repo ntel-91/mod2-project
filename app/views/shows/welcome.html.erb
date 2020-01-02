@@ -29,21 +29,22 @@
 
 
    
+    <div class="search-container">
+        <%if params[:search]%>
+                <h2 style="color:rgb(255, 0, 0);text-align:center;">Search results:</h2>
+            <% shows = @search_shows.select{|show| show.show_name.downcase.include? params[:search.downcase] }%>
 
-    <%if params[:search]%>
-        <h2 style="color:rgb(255, 0, 0);text-align:center;">Search results:</h2>
-    <% shows = @search_shows.select{|show| show.show_name.downcase.include? params[:search.downcase] }%>
+            <%if shows.empty?%>
+
+              <h2 style="color:rgb(255, 0, 0);text-align:center;">Nothing Matches Your Search Terms</h2>
+            <%else%>
+                <% shows.map do |show| %>
+                <%= link_to image_tag(show.show_cover, size: "260x150"), show_path(show.id) %>
     
-    <%if shows.empty?%>
-    
-      <h2 style="color:rgb(255, 0, 0);text-align:center;">Nothing Matches Your Search Terms</h2>
-    <%else%>
-        <% shows.map do |show| %>
-              <%= link_to image_tag(show.show_cover, size: "260x150"), welcome_path %>
-        <% end %>
-    <% end %>
-    
-    <%end%>
+                <% end %>
+            <% end %>
+        <%end%>
+    </div>
 
 
     <div class="contain">
